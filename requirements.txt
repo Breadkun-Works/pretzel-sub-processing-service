@@ -1,0 +1,7 @@
+fastapi==0.116.1          # 웹 프레임워크
+uvicorn[standard]==0.35.0 # ASGI 서버 + uvloop·httptools 고성능 옵션
+python-dotenv==1.1.1      # .env 로 설정 읽기
+httpx==0.28.1             # 비동기 HTTP 클라이언트 (크롤링·API 호출용)
+beautifulsoup4==4.13.4    # HTML 파싱
+pydantic==2.11.7
+pydantic-settings==2.10.1

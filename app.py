@@ -2,6 +2,8 @@ from fastapi import FastAPI, HTTPException, Request
 import pkgutil, importlib, asyncio
 from typing import Callable, Awaitable, Dict
 
+from config import settings
+
 PROCESSORS: Dict[str, Callable[[dict], Awaitable[dict]]] = {}
 
 
@@ -42,9 +44,4 @@ def available():
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run(
-        "app:app",
-        host="0.0.0.0",
-        port="8000",
-        reload=True  # 코드 변경시 리로드
-    )
+    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
